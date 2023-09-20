@@ -68,14 +68,13 @@
 
       var credentials = {
         'vcrim': 'poptarts',
-        'coolhijacker': 'ihajekplanes',
-        'letsadress': 'theelephant',
-        '1': '321',
+        'hajek': 'c.haj23',
+        'admin': 'adminacc',
       };
 
       if (credentials.hasOwnProperty(username) && credentials[username] === password) {
         // Redirect to the game launcher page based on user access
-        if (username === 'vcrim' || username === 'coolhijacker' || username === 'letsadress' || username === '1') {
+        if (username === 'vcrim' || username === 'hajek' || username === 'admin') {
           window.location.href = 'storage/launch.html';
         }
       } else {
