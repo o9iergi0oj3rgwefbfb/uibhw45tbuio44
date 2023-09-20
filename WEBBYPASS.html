@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: black;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      font-family: Arial, sans-serif;
+    }
+    #login-container {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: darkgrey;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+    .input-group {
+      margin-bottom: 10px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .input-group input {
+      width: 93%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .button-container {
+      text-align: center;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: lightgrey;
+      color: black;
+      cursor: pointer;
+    }
+    .button-container button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-container">
+    <div class="input-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter username">
+    </div>
+    <div class="input-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+    <div class="button-container">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      var credentials = {
+        'vcrim': 'poptarts',
+        'coolhijacker': 'ihajekplanes',
+        'letsadress': 'theelephant',
+        '1': '321',
+      };
+
+      if (credentials.hasOwnProperty(username) && credentials[username] === password) {
+        // Redirect to the game launcher page based on user access
+        if (username === 'vcrim' || username === 'coolhijacker' || username === 'letsadress' || username === '1') {
+          window.location.href = 'storage/launch.html';
+        }
+      } else {
+        alert('Invalid username or password.');
+      }
+    }
+  </script>
+</body>
+</html>
